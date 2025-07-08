@@ -1,0 +1,38 @@
+
+---
+
+## 💾 Database Schema
+
+Make sure MySQL is running. Create the database manually or let JPA handle it.
+
+```sql
+CREATE DATABASE irctc;
+
+USE irctc;
+
+-- User table
+CREATE TABLE users (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255)
+);
+
+-- Train table
+CREATE TABLE trains (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(100),
+  source VARCHAR(100),
+  destination VARCHAR(100),
+  total_seats INT
+);
+
+-- Ticket table
+CREATE TABLE tickets (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  seat_number INT,
+  user_id BIGINT,
+  train_id BIGINT,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (train_id) REFERENCES trains(id) ON DELETE CASCADE
+);
