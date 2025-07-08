@@ -35,6 +35,11 @@ This project is a web-based **IRCTC-style Train Ticket Booking System**, built u
 | Application Type | WAR (runs on embedded or external Tomcat)       |
 
 ---
+# Step 1: Build the project
+mvn clean install
+
+# Step 2: Run using embedded Tomcat
+mvn spring-boot:run
 
 ## 📁 Project Structure
 
