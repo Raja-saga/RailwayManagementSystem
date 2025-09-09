@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IRCTC Train Reservation System – Spring MVC Web Application
 
 This project is a web-based **IRCTC-style Train Ticket Booking System**, built using **Spring Boot (MVC architecture)**, **Spring Data JPA**, **JSP**, and **MySQL**. It allows users to sign up, log in, search for trains, book seats, view tickets, and cancel bookings. The system is built following clean MVC separation and leverages a relational database to persist user and train data.
@@ -59,3 +60,6 @@ IrctcApplication/
 │
 ├── pom.xml # Maven project configuration
 
+=======
+# RailwayManagementSystem
+>>>>>>> 354957f2d6c4c2155f77ac0900bf5caa068c8351
